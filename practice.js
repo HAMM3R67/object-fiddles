@@ -140,7 +140,7 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   for(var key in states){
-    if(key > 30000){
+    if(states.key > 30000){
       alert(key)
     }
   }
@@ -260,7 +260,12 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
-  //Code Here
+  function makeCard (name, num, expDate){
+    var newCard = {name, num, expDate}
+    return newCard
+  }
+  
+  makeCard('Trevor Schauerhamer', 4566099921334555, 0117);
   
   
   
@@ -273,6 +278,12 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
    Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
 */
 
-  //Code Here
+  function bindCard (personObject, cardObject) {
+    var personCard = {}
+    for(var key in bindCard){
+      personCard= (personObject[key] = cardObject[key])
+      console.log(personCard)
+    }
+  }
 
 
