@@ -140,8 +140,8 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   for(var key in states){
-    if(states.key > 30000){
-      alert(key)
+    if(states[key] > 30000){
+    alert(key)
     }
   }
 
@@ -246,11 +246,11 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
   function makePerson (name, birthday, ssn) {
-    var newObject = {name, birthday, ssn}
-    return newObject
+    var newPerson = {name, birthday, ssn}
+    return newPerson
   }
   
-  makePerson('Trevor',052387, 987234554)
+  var trevor = makePerson('Trevor',052387, 987234554)
 
 
 
@@ -265,7 +265,7 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
     return newCard
   }
   
-  makeCard('Trevor Schauerhamer', 4566099921334555, 0117);
+  var trevcard = makeCard('Trevor Schauerhamer', 4566099921334555, 0117);
   
   
   
@@ -285,5 +285,5 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
       console.log(personCard)
     }
   }
-
+var bindCardTrev = binCard(trevor, trevcard); 
 
