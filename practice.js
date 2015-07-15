@@ -79,11 +79,21 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
-  //Code Here
+  var me = {
+    name: 'Trevor',
+    age: 28,
+    height: '6 feet 6 inches',
+    gender: 'Male',
+    married: 'Yes',
+    eyeColor: 'Hazel',
+    hairColor: 'Brown',
+  }
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-  //Code Here
+  for(var key in me){
+    alert(me[key])
+  }
 
 
 
