@@ -1,0 +1,16 @@
+<html>
+<body>
+<script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+<script>
+$.get("http://api.openweathermap.org/data/2.5/weather?q=q=Salt%20Lake%20City,ut:&units=imperial")
+.success(function(data){
+    console.log(data);
+    alert(data.main.temp);
+})
+
+</script>
+</body>
+</html>
+
+
+//Use the weather api to fetch the weather information for salt lake city and alert the current temperature.
