@@ -105,11 +105,19 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
-  //Code Here
+  var album = {
+    fingers: '3 min 12 sec',
+    waterWalking: '4 min 44 sec',
+    soaring: '1 min 5 sec',
+    fallingDown: '2 min 10 sec',
+    risingUp: '6 min 59 sec'
+  }
 
 //Now, loop through your album object alerting every song title individually.
 
-  //Code Here
+  for(var key in album) {
+    alert(key)
+  }
 
 
 
@@ -121,11 +129,21 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+  var states = {
+    utah: 100000,
+    colorado: 50000,
+    alaska: 5000,
+    northCarolina: 500000,
+    california: 1000000
+  }
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-  //Code Here
+  for(var key in states){
+    if(key > 30000){
+      alert(key)
+    }
+  }
 
 
 
@@ -146,7 +164,14 @@ var user = {
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
+  for(var key in user) {
+    if(user[key]) {
+      continue;
+    }
+    else {
+      delete user[key];
+    }
+  }
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
