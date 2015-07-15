@@ -277,13 +277,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
    Now, create a bindCard function that takes in a person object as its first parameter and a creditcard object as its second parameter.
    Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
 */
-
-  function bindCard (personObject, cardObject) {
-    var personCard = {}
-    for(var key in bindCard){
-      personCard= (personObject[key] = cardObject[key])
-      console.log(personCard)
+var bindCard = function (personObject, cardObject) {
+    for (n in cardObject) {
+        if (typeof personObject[n] != 'object') {
+            personObject[n] = cardObject[n];
+        } else if (typeof cardObject[n] == 'object') {
+            personObject[n] = realMerge(personObject[n], cardObject[n]);
+        }
     }
-  }
-var bindCardTrev = binCard(trevor, trevcard); 
-
+    return personObject;
+};
